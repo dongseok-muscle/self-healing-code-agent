@@ -1,10 +1,17 @@
 from llm_factory import get_llm
 
 
-llm = get_llm()
+def main():
 
-response = llm.invoke(
-    "Write a Python function that adds two numbers."
-)
+    llm = get_llm()
 
-print(response.content)
+    response = llm.invoke(
+        "Write a Python function that adds two numbers."
+    )
+
+    print("\nAI Response:\n")
+    print(response.content)
+
+
+if __name__ == "__main__":
+    main()
